@@ -1,11 +1,7 @@
 # Site settings
-title: Emeraldx | A simple Jekyll blog
-description: "A minimal blog template, build with Jekyll."
+title: Blog | ROSECURE
+description: "Blog despre securitate cibernetica, criminalitate informatica si penetration testing"
 url: "https://blog.rosecure.ro"
-author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
