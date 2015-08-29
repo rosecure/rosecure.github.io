@@ -6,7 +6,7 @@
 	{% if page.desc %}
 	<meta name="description" content="{{ page.desc }}" />
 	{% else %}
-	<meta name="description" content="ROSECURE este o companie care furnizează servicii și consultanță IT&C, cu  o bogată expertiză în soluții de securitate cibernetică." />
+	<meta name="description" content="Blog | ROSECURE este o companie care furnizează servicii și consultanță IT&C, cu  o bogată expertiză în soluții de securitate cibernetică." />
 	{% endif %}
 	{% if page.keywords %}
 	<meta name="keywords" content="{{ page.keywords }}" />
@@ -14,11 +14,13 @@
 	<meta name="keywords" content="securitate cibernetica romania, cyber security romania, pentest romania, penetration testing romania" />
 	{% endif %}
 	<meta name="robots" content="index, follow"/>
-	<meta property="og:title" content="ROSECURE - securitate cibernetica"/>
-	<meta property="og:type" content="website"/>
+	
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:type" content="{% if page.keywords %}article{% else %}website{% endif %}">
+	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<meta property="og:image" content="https://rosecure.ro/img/rosecure_logo2.png"/>
-	<meta property="og:url" content="https://rosecure.ro/"/>
-	<meta property="og:description" content="ROSECURE este o companie care furnizează servicii și consultanță IT&C, cu  o bogată expertiză în soluții de securitate cibernetică."/>
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	
 	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 	<!-- CSS & fonts -->
